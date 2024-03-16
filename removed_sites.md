@@ -424,7 +424,7 @@ Good-bye [Google Plus](https://en.wikipedia.org/wiki/Google%2B)...
 ## InsaneJournal
 
 As of 2020-02-23, InsaneJournal returns false positive, when providing a username which contains a period.
-Since we were not able to find the critera for a valid username, the best thing to do now is to remove it.
+Since we were not able to find the criteria for a valid username, the best thing to do now is to remove it.
 
 ```json
   "InsaneJournal": {
@@ -625,7 +625,7 @@ removed
 
 ## Coderwall
 As of 2020-07-06, Coderwall returns false positives when checking for an username which contains a period.
-I have tried to find out what Coderwall's criteria is for a valid username, but unfortunetly I have not been able to 
+I have tried to find out what Coderwall's criteria is for a valid username, but unfortunately I have not been able to 
 find it and because of this, the best thing we can do now is to remove it.
 ```json
   "Coderwall": {
@@ -1824,4 +1824,62 @@ As of 2023.08.29, GunsAndAmmo responds with 404 from time to time
     "urlMain": "https://gunsandammo.com/",
     "username_claimed": "adam"
   }
+```
+
+## TikTok
+As of 2023.12.21, TikTok returns false positives. This is because the webpage returns a somewhat blank page. This prevents us from being able to check for the existence of usernames. Proxitok does not work either.
+
+```json
+  "TikTok": {
+    "errorType": "status_code",
+    "url": "https://tiktok.com/@{}",
+    "urlMain": "https://tiktok.com/",
+    "username_claimed": "red"
+  },
+```
+
+## Lolchess
+As of 2023.12.21, Lolchess returns false positives.
+```json
+  "Lolchess": {
+    "errorMsg": "No search results",
+    "errorType": "message",
+    "url": "https://lolchess.gg/profile/na/{}",
+    "urlMain": "https://lolchess.gg/",
+    "username_claimed": "blue"
+  },
+```
+
+## Virgool
+As of 2023.12.21, Virgool returns false positives.
+```json
+  "Virgool": {
+    "errorMsg": "\u06f4\u06f0\u06f4",
+    "errorType": "message",
+    "url": "https://virgool.io/@{}",
+    "urlMain": "https://virgool.io/",
+    "username_claimed": "blue"
+  },
+```
+
+## Whonix Forum
+As of 2023.12.21, Whonix Forum returns false positives.
+```json
+  "Whonix Forum": {
+    "errorType": "status_code",
+    "url": "https://forums.whonix.org/u/{}/summary",
+    "urlMain": "https://forums.whonix.org/",
+    "username_claimed": "red"
+  },
+```
+
+## Ebio
+As of 2023.12.21, Ebio returns false positives.
+```json
+  "ebio.gg": {
+    "errorType": "status_code",
+    "url": "https://ebio.gg/{}",
+    "urlMain": "https:/ebio.gg",
+    "username_claimed": "dev"
+  },
 ```
